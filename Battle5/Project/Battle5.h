@@ -1,6 +1,9 @@
 //Dirty flag design pattern
 #include <iostream>
 
+//object has primary data and derived data
+//derived data is all parents' primary data added together
+//dirty flag is true when this derived data needs to be recalculated
 class Object {
 private:
 	int deriveddata;
