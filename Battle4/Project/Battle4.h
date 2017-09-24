@@ -1,6 +1,7 @@
 //Service Locator design pattern
 #include <iostream>
 
+//abstract service class
 class Service {
 public:
 	virtual void startComponent(int id) = 0;
@@ -9,6 +10,7 @@ public:
 	virtual void printActiveComponents() = 0;
 };
 
+//implemented service which has boolean components
 class NormalService : public Service {
 private:
 	bool servarray[20];
@@ -41,6 +43,7 @@ public:
 	}
 };
 
+//implemented service which has integer components (pretend the integers are priority rankings)
 class OtherService : public Service {
 private:
 	int servarray[20];
@@ -78,6 +81,7 @@ public:
 	}
 };
 
+//static methods to facilitate locating the current active service
 class ServiceLocator {
 
 public:
