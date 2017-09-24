@@ -1,6 +1,7 @@
-//Type object
+//Type object design pattern
 #include <iostream>
 
+//Type class
 class SomethingElse {
 private:
 	int prop;
@@ -15,6 +16,7 @@ public:
 	const char* getString() { return string; }
 };
 
+//Object class with embedded type class reference
 class Something {
 private:
 	SomethingElse& somethingelse;

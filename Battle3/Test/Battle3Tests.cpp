@@ -1,16 +1,20 @@
-//Prototype design pattern
+//Type Object design pattern tests
 #include <iostream>
 #include "../Project/Battle3.h"
 
 int main(void) {
+	std::cout << "Initializing 2 types..." << std::endl;
 	SomethingElse se1(10, "String1");
 	SomethingElse se2(20, "String2");
 
+	std::cout << "Initializing 2 objects per type..." << std::endl;
 	Something s1(se1);
 	Something s2(se1);
 	Something s3(se2);
 	Something s4(se2);
+	std::cout << std::endl;
 
+	std::cout << "Objects using type String1:" << std::endl;
 	std::cout << "Instance 1: ";
 	s1.print();
 	std::cout << "Instance 2: ";
@@ -23,9 +27,9 @@ int main(void) {
 	s1.print();
 	std::cout << "Instance 2: ";
 	s2.print();
-
 	std::cout << std::endl;
 
+	std::cout << "Objects using type String2:" << std::endl;
 	std::cout << "Instance 1: ";
 	s3.print();
 	std::cout << "Instance 2: ";
@@ -40,6 +44,7 @@ int main(void) {
 	s3.print();
 	std::cout << "Instance 2: ";
 	s4.print();
+	std::cout << std::endl;
 
 	std::cout << "Press ENTER to quit." << std::endl;
 	std::cin.get();
