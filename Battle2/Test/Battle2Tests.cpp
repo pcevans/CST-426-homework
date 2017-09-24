@@ -1,4 +1,4 @@
-//Prototype design pattern tests
+//Game Loop design pattern tests
 #include <iostream>
 #include "../Project/Battle2.h"
 
